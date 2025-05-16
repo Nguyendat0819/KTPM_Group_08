@@ -33,6 +33,9 @@ Kiểm tra lịch sử giao dịch: Quản trị viên có thể xem các giao d
 Tìm kiếm sản phẩm: Khách hàng có thể tìm kiếm sản phẩm theo tên, thương hiệu, bộ vi xử lý, RAM, ổ cứng, v.v.
 Lọc sản phẩm: Cung cấp các bộ lọc như giá, thương hiệu, danh mục, và các đặc tính khác (bộ vi xử lý, RAM, v.v.) giúp khách hàng dễ dàng tìm kiếm sản phẩm phù hợp.
 
-
++++CONG NGHE SU DUNG+++
+Front-end : Html,css,js.
+Back-end : PHP
+CSDL : My SQL
 
 
