@@ -40,7 +40,7 @@ o	products: Danh sách các sản phẩm có trong kho.
 6. Lớp Sales (Bán hàng)
 Lớp này xử lý các giao dịch bán hàng, tạo và xử lý đơn hàng.
 
-
++++ CAC CHUC NANG +++
 1. Quản lý sản phẩm
 -Thêm sản phẩm mới: Cho phép quản trị viên thêm các sản phẩm laptop mới vào hệ thống. Bao gồm các thông tin như tên sản phẩm, thương hiệu, bộ vi xử lý, dung lượng RAM, dung lượng ổ cứng, giá, số lượng, và danh mục.
 -Cập nhật sản phẩm: Quản trị viên có thể chỉnh sửa thông tin sản phẩm, ví dụ: thay đổi giá, số lượng, hoặc mô tả sản phẩm.
