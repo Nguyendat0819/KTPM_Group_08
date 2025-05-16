@@ -39,11 +39,6 @@ Lớp này quản lý các sản phẩm trong kho của shop.
 o	products: Danh sách các sản phẩm có trong kho.
 6. Lớp Sales (Bán hàng)
 Lớp này xử lý các giao dịch bán hàng, tạo và xử lý đơn hàng.
-7. Lớp Discount (Giảm giá)
-Lớp này đại diện cho các chương trình giảm giá có thể áp dụng cho các sản phẩm hoặc đơn hàng.
-•	Thuộc tính:
-o	discount_percentage: Tỷ lệ giảm giá.
-o	start_date: Ngày bắt đầu áp dụng giảm giá.
-o	end_date: Ngày kết thúc giảm giá.
+
 
 
