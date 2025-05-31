@@ -1,0 +1,282 @@
+header {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+
+.top-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-search-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    width: 200px;
+    
+}
+
+.quick-for-user {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+}
+
+.search-background {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+
+.input-search {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: transparent;
+    min-width: 0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    background-color: white;
+    color: #007bff;
+    cursor: pointer;
+    font-style: italic;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-left: 1px solid #ddd;
+}
+
+.search-button:hover {
+    background-color:  #e3f1e6; 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.search-icon-img {
+    width: 16px;
+    height: 16px;
+}
+
+.text-link:hover {
+    color: #009981;
+    background-color:#e3f1e6 ;
+    border-radius: 5px;
+}
+
+.hotline-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.user, .cart , .hotline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-direction: row;
+}
+
+.user-icon, .cart-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.hotline{
+    transform: translateX(-170px);
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user {
+    transform: translateX(-100px);
+}
+
+.cart {
+    transform: translateX(-20px);
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
+        width: 160px;
+    }
+
+    .search-background {
+        margin-left: 10px;
+    }
+
+    .user, .cart, .hotline {
+        font-size: 14px;
+    }
+
+    .user-icon, .cart-icon, .hotline-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.wrapper{
+    display: flex;
+}
+
+
+.nav-full nav ul li > a {
+    display: flex;
+    padding: 8px 12px 8px 12px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+h2{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.root{
+    justify-content: center;
+}
+
+
+.label:hover {
+    text-decoration: none;
+    color: #009981;
+    background-color:#e3f1e6 ;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+/*footer */
+
+footer .bg .col-content {
+    display: flex;
+    gap: 20px;
+}
+
+footer .bg {
+    background: #006555;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    float: right;
+    margin-bottom: 12px;
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+
+footer .bg .col-content > div {
+    width: 25%;
+}
+
+footer .bg .col-content > div {
+    flex-direction: column;
+    width: 16.6666%;
+    padding-left: 10px;
+}
+
+.col-content{
+    padding-left: 0px;
+}
+
+div {
+    unicode-bidi: isolate;
+}
+
+.link-content{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.list-care{
+    color: white;
+}
+
+.support{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.list-link{
+    padding-left:0px;
+}
+
+.list-care:hover{
+    color: #009926;
+}
+
+.info{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+a.phone-number:hover{
+    color: #990000;
+}
+
+a.phone-number{
+    font-size: 25px;
+    background-color: white;
+    color: #00695c;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+}

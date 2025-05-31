@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <section class = "top-heading">
+        <div class = "logo-search-user">
+            <div class ="logo">
+                <a href="#">
+                    <img src="../assets/logo.webp" alt="Logo" title="Trang chủ">
+                </a>
+            </div>
+            <div class = "quick-for-user">
+            <div class ="search">
+                <div class="search-box">
+                    <form>
+                        <div class="search-background">
+                        <input class="input-search" type="text" placeholder="Bạn muốn tìm kiếm gì?">
+                        <button class="search-button" type="submit" title="Tìm kiếm">
+                            <img src="../assets/search-icon.png" alt="Tìm kiếm" class="search-icon-img">
+                            <span>Tìm kiếm</span>
+                        </button>
+                        </div>
+                    </form>
+                    </div>
+                <div class = "search-suggest">
+                </div>
+            </div>
+            <a class ="hotline text-link" href="tel:1234.5678" title="Nhấn để gọi" href="#">
+                <img class ="hotline-icon" src="../assets/hotline.png" alt="Hotline">
+                <span>1234 5678</span>
+            </a>
+            <a class ="user text-link" href="./login.php" title="Truy cập tài khoản" href="#">
+                <img class ="user-icon" src="../assets/user.png" alt="Tài khoản">
+                <span><b>Tài khoản</b></span>
+            </a>
+            <a class="cart text-link" href="#" title="Xem giỏ hàng">
+                <img class = "cart-icon" src="../assets/cart.png" alt="Giỏ hàng">
+                <span><b>Giỏ hàng</b></span>
+            </a>
+            </div>
+        </div>
+    </section>
+    </header>
+    <div class = "w-container body-wrapper">
+        <div class = "wrapper">
+            <div class = "wrapper">
+                <div class = "nav-full">
+                    <nav>
+                        <h2>Danh mục</h2>
+                        <ul class="root" type="none">
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/apple.png" alt="apple" title="Mac">
+                                Mac</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/asus.png" alt="asus" title="ASUS">
+                                ASUS</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/Lenovo.png" alt="lenovo" title="Lenovo">
+                                Lenovo</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/dell.png" alt="dell" title="Dell">
+                                Dell</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/HP.png" alt="hp" title="HP">
+                                HP</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/Acer.png" alt="acer" title="Acer">
+                                Acer</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/LG.png" alt="lg" title="LG">
+                                LG</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/Huawei.png" alt="huawei" title="Huawei">
+                                Huawei</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/msi.png" alt="msi" title="MSI">
+                                MSI</a></li>
+                            <li><a class = "label" href="#" target="_self">
+                                <img class="icon" src="../assets/laptop/gigabyte.png" alt="gigabyte" title="Gigabyte">
+                                Gigabyte</a></li>
+                        </ul>
+                    </nav>
+                    <nav></nav>
+                </div>
+                <div class ="right-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="bg">
+            <div class="col-content">
+                <div class="link-content">
+                    <h4 style="font-size: 16px;">Hỗ trợ - dịch vụ</h4>
+                    <ul type="none" class="list-link">
+                        <li><a class="list-care" href="#">Chính sách và hướng dẫn mua hàng trả góp</a></li>
+                        <li><a class="list-care" href="#">Hướng dẫn mua hàng và chính sách vận chuyển</a></li>
+                        <li><a class="list-care" href="#">Tra cứu đơn hàng</a></li>
+                        <li><a class="list-care" href="#">Chính sách đổi mới và bảo hành</a></li>
+                        <li><a class="list-care" href="#">Dịch vụ bảo hành mở rộng</a></li>
+                        <li><a class="list-care" href="#">Chính sách bảo mật</a></li>
+                        <li><a class="list-care" href="#">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a class="list-care" href="#">Quy chế hoạt động</a></li>
+                        <li><a class="list-care" href="#">Chương trình Hoàng Hà Edu</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4 style="font-size: 16px;">Thông tin liên hệ</h4>
+                    <ul type="none" class="list-link">
+                        <li><a class="list-care" href="#">Thông tin các trang TMĐT</a></li>
+                        <li><a class="list-care" href="#">Chăm sóc khách hàng</a></li>
+                        <li><a class="list-care" href="#">Dịch vụ sửa chữa</a></li>
+                        <li><a class="list-care" href="">Khách hàng doanh nghiệp (B2B)</a></li>
+                        <li><a class="list-care" href="">Tuyển dụng</a></li>
+                        <li><a class="list-care" href="">Tra cứu bảo hành</a></li>
+                    </ul>
+                </div>
+                <div style="font-family: 'Roboto', sans-serif;">
+                    <h4 style="font-size: 16px;">Thanh toán miễn phí</h4>
+                    <ul type="none" class="list-card list-link">
+                            <img src="../assets/card/visa.png" alt="Visa" title="Thanh toán bằng thẻ Visa">
+                            <img src="../assets/card/mastercard.png" alt="MasterCard" title="Thanh toán bằng thẻ MasterCard">
+                            <img src="../assets/card/jcb.png" alt="JCB" title="Thanh toán bằng thẻ JCB">
+                            <img src="../assets/card/applepay.png" alt="APPLEPAY" title="Thanh toán bằng thẻ Apple Pay">
+                            <img src="../assets/card/samsungpay.png" alt="PayPal" title="Thanh toán bằng PayPal">
+                            <img src="../assets/card/zalopay.png" alt="ZaloPay" title="Thanh toán bằng ZaloPay">
+                            <img src="../assets/card/vnpay.png" alt="VNPay" title="Thanh toán bằng VNPay">
+                        </li>
+                    </ul>
+                    <div>
+                        <h4 style="font-size: 16px;">Hình thức vận chuyển</h4>
+                        <ul type="none" class="list-logo list-link">
+                            <li>
+                                <img src="../assets/deliver/nhattin.png" alt="NHATTIN">
+                                <img src="../assets/deliver/vnpost.png" alt="VNPOST" >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="support">
+                    <h4 style="font-size: 16px ;">Tổng đài</h4>
+                    <a class="phone-number" href="tel:1234.5678">1234.5678</a>
+                    <div style="font-size: 14px;">(Từ 8h30-21h30)</div>
+                </div>
+                <div class="support">
+                    <h4 style="font-size: 16px;">Kết nối với chúng tôi</h4>
+                    <ul type="none" style="display:flex; gap:4px" class="list-link">
+                        <li><a href="#" target="_blank" class="footer-social-item"><img src="../assets/social/fb.png"></a></li>
+                        <li><a href="#" target="_blank" class="footer-social-item"><img src="../assets/social/tt.png"></a></li>
+                        <li><a href="#" target="_blank" class="footer-social-item"><img src="../assets/social/inst.png"></li>
+                        <li><a href="#" target="_blank" class="footer-social-item"><img src="../assets/social/yt.png"></li>
+                        <li><a href="#" target="_blank" class="footer-social-item"><img src="../assets/social/thr.png"></li>
+                    </ul>
+                    <div class="mg-top20">
+                    <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="../assets/social/logo-bct.png"></a>
+                </div>
+                </div>
+            </div>
+            <div class="info">
+                <p>© 2023 Laptop Store. Bản quyền thuộc về Công ty TNHH Laptop Store. Công ty cổ phần thương mại Laptop Store.</p>
+                <p>Địa chỉ: Số 123, Đường ABC, Quận XYZ, TP. Hà Nội, Việt Nam. Điện thoại: 1234.5678.</p>
+                <p>Email: <a href="mailto:laptopstore@gmail.com" style="color:white">laptopstore@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
