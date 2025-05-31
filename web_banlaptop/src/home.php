@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -5,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
@@ -33,15 +33,15 @@
                 <div class = "search-suggest">
                 </div>
             </div>
-            <a class ="hotline text-link" title="Nhấn để gọi" href="#">
+            <a class ="hotline text-link" href="tel:1234.5678" title="Nhấn để gọi" href="#">
                 <img class ="hotline-icon" src="../assets/hotline.png" alt="Hotline">
                 <span>1234 5678</span>
             </a>
-            <a class ="user text-link" title="Truy cập tài khoản" href="#">
+            <a class ="user text-link" href="./login.php" title="Truy cập tài khoản" href="#">
                 <img class ="user-icon" src="../assets/user.png" alt="Tài khoản">
                 <span><b>Tài khoản</b></span>
             </a>
-            <a class="cart text-link" title="Xem giỏ hàng">
+            <a class="cart text-link" href="#" title="Xem giỏ hàng">
                 <img class = "cart-icon" src="../assets/cart.png" alt="Giỏ hàng">
                 <span><b>Giỏ hàng</b></span>
             </a>
