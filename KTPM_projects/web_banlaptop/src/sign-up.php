@@ -205,19 +205,7 @@
                                         mysqli_stmt_bind_param($stmt,"ssssss", $customerName,$email, $userName,$password,$date,$gender);
                                         if(mysqli_stmt_execute($stmt)){
                                             echo"them du lieu thanh cong";
-                                                echo $customerName;
-                                                echo "<br>";
-                                                echo $email;
-                                                echo "<br>";
-                                                echo $userName;
-                                                echo "<br>";
-                                                echo $password;
-                                                echo "<br>";
-                                                echo $repeat_password;
-                                                echo "<br>";
-                                                echo $date;
-                                                echo "<br>";
-                                                echo $gender;
+                                               
                                         }else{
                                             echo"lỗi khi thực hiện câu lệnh". mysqli_stmt_errno($stmt);
                                         }
@@ -257,4 +245,26 @@
         </div>
     </div>
 </body>
+<script>
+    const eyeIcons = document.querySelectorAll(".eye-icon");
+
+    eyeIcons.forEach((icon, index) => {
+        const input = icon.previousElementSibling;
+
+        let visible = false;
+
+        icon.addEventListener("click", () => {
+            visible = !visible;
+            if (visible) {
+                input.type = "text";
+                icon.src = "../assets/login/eye-closed.jpg";
+                icon.alt = "Ẩn mật khẩu";
+            } else {
+                input.type = "password";
+                icon.src = "../assets/login/eye-opened.png"; 
+                icon.alt = "Hiện mật khẩu";
+            }
+        });
+    });
+</script>
 </html>

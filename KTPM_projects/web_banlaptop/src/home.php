@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css"> 
 </head>
 <body>
     <header>
         <section class = "top-heading">
         <div class = "logo-search-user">
             <div class ="logo">
-                <a href="#">
+                <a href="home.php">
                     <img src="../assets/logo.webp" alt="Logo" title="Trang chủ">
                 </a>
             </div>
@@ -41,7 +41,7 @@
                 <img class ="user-icon" src="../assets/user.png" alt="Tài khoản">
                 <span><b>Tài khoản</b></span>
             </a>
-            <a class="cart text-link" href="#" title="Xem giỏ hàng">
+            <a class="cart text-link" href="" title="Xem giỏ hàng">
                 <img class = "cart-icon" src="../assets/cart.png" alt="Giỏ hàng">
                 <span><b>Giỏ hàng</b></span>
             </a>
@@ -56,34 +56,34 @@
                     <nav>
                         <h2>Danh mục</h2>
                         <ul class="root" type="none">
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=Mac" target="_self">
                                 <img class="icon" src="../assets/laptop/apple.png" alt="apple" title="Mac">
                                 Mac</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=ASUS" target="_self">
                                 <img class="icon" src="../assets/laptop/asus.png" alt="asus" title="ASUS">
                                 ASUS</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=Lenovo" target="_self">
                                 <img class="icon" src="../assets/laptop/Lenovo.png" alt="lenovo" title="Lenovo">
                                 Lenovo</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=Dell" target="_self">
                                 <img class="icon" src="../assets/laptop/dell.png" alt="dell" title="Dell">
                                 Dell</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=HP" target="_self">
                                 <img class="icon" src="../assets/laptop/HP.png" alt="hp" title="HP">
                                 HP</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=Acer" target="_self">
                                 <img class="icon" src="../assets/laptop/Acer.png" alt="acer" title="Acer">
                                 Acer</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=LG" target="_self">
                                 <img class="icon" src="../assets/laptop/LG.png" alt="lg" title="LG">
                                 LG</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=Huawei" target="_self">
                                 <img class="icon" src="../assets/laptop/Huawei.png" alt="huawei" title="Huawei">
                                 Huawei</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=MSI" target="_self">
                                 <img class="icon" src="../assets/laptop/msi.png" alt="msi" title="MSI">
                                 MSI</a></li>
-                            <li><a class = "label" href="#" target="_self">
+                            <li><a class="label" href="homeUser.php?type=Gigabyte" target="_self">
                                 <img class="icon" src="../assets/laptop/gigabyte.png" alt="gigabyte" title="Gigabyte">
                                 Gigabyte</a></li>
                         </ul>
@@ -91,6 +91,81 @@
                     <nav></nav>
                 </div>
                 <div class ="right-content">
+                    <div class="container">
+                        <div class="container_list">
+                            <div class="wrapper_colum">
+                                <div class="squard">
+                                    <?php 
+                                        $conn = mysqli_connect('localhost','root','','ktpm'); // Kết nối đến cơ sở dữ liệu
+                                        if(!$conn){
+                                            die("Kết nối cơ sở dữ liệu thất bại".mysqli_connect_error());
+                                        }
+                                        $item_per_page = !empty($_GET['per_page']) ?$_GET['per_page']:15;
+                                        $current_page = !empty($_GET['page'])?$_GET['page']:1;
+                                        $offset = ($current_page - 1) * $item_per_page;
+
+                                        // truy vấn tổn số sản phẩm để tính số trang
+                                        $total_result = mysqli_query($conn, "SELECT COUNT(*) AS total from products"); //tổng số 
+                                        $total_row = mysqli_fetch_assoc($total_result); // bên trong là mảng 
+                                        $total_items = $total_row['total']; // lấy dòng cuối của products là tổng số lượng ví dụ như 97 sản phẩm
+                                        $totalPage = ceil($total_items / $item_per_page); // tính số trang
+                                        $sql_lietke = "SELECT productCode, productName, buyPrice, fileImage FROM products ORDER BY productCode ASC LIMIT $item_per_page  OFFSET $offset";                           
+                                        $rows_lietke = mysqli_query($conn, $sql_lietke);
+                                        
+                                        if($rows_lietke){
+                                            while($row = mysqli_fetch_assoc($rows_lietke)){
+                                                echo"<a href='detailsProduct.php?id=".$row['productCode']."'>";
+                                                echo "<div class='squard_item'>";
+                                                echo "<img src='../images/" . $row['fileImage'] . "' width='188' height ='200' ><br>";
+                                                echo "</div>";
+                                                echo"<span class='squard_item_prodcutName'>";
+                                                echo $row['productName']. "<br>". number_format($row['buyPrice'], 0, ',', '.')." VNĐ";
+                                                echo"</span>";
+                                                echo"</a>";                                
+                                            }
+                                        }else{
+                                            echo "Lỗi truy vấn: ".mysqli_error($conn);
+                                        }
+
+                                        // hiển thị trang 
+                                    ?>
+                            
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- phần điều hướng -->
+
+                        <div class="page">
+                            <div class="list_page">
+                                <!--Nút bên trái  -->
+                                <?php if($current_page >= 1): ?>
+                                    <a class="page_conttroler page_conttroler_left button_icon_nav" href="?page=<?= $current_page - 1 ?>&per_page=<?= $item_per_page ?>">
+                                        <svg class="shopee-svg-icon icon-arrow-left" viewBox="0 0 11 11"><g><path d="m8.5 11c-.1 0-.2 0-.3-.1l-6-5c-.1-.1-.2-.3-.2-.4s.1-.3.2-.4l6-5c .2-.2.5-.1.7.1s.1.5-.1.7l-5.5 4.6 5.5 4.6c.2.2.2.5.1.7-.1.1-.3.2-.4.2z"/></g></svg>
+                                    </a>
+                                <?php endif ;?>
+                            
+                                <div class="pagination">
+                                    <?php
+                                    for ($i = 1; $i <= $totalPage; $i++) {
+                                        if ($i == $current_page) {
+                                            echo "<span class='page_button current'>$i</span>";
+                                        } else {
+                                            echo "<a href='?page=$i&per_page=$item_per_page' class='page_button'>$i</a>";
+                                        }
+                                    }
+                                    ?>
+                                </div>
+
+                                <!-- Nút mũi tên phải -->
+                                <?php if ($current_page <=   $totalPage): ?>
+                                    <a class="page_conttroler page_conttroler_right button_icon_nav" href="?page=<?= $current_page + 1 ?>&per_page=<?= $item_per_page ?>">
+                                        <svg class="shopee-svg-icon icon-arrow-right" viewBox="0 0 11 11"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"/></path></svg>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

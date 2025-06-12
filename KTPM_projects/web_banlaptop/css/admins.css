@@ -1,0 +1,151 @@
+h1{
+    text-align: center;
+}
+.form_uplpoad{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+}
+.input_products{
+    margin-bottom: 12px;
+    width: 100%;
+}
+.input_products input{
+    width: 100%;
+    height: 50px;
+}
+.input_image_products input{
+    
+    height: 30px;
+}
+.input_image_products button{
+    width: 80px;
+    height: 40px;
+}
+.input_products_submit input{
+    width: 150px;
+    height: 60px;
+    float: right;
+}
+
+header {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+    height: 50px;
+    width: 200px;
+}
+
+a {
+    color: black !important;
+    text-decoration: none;
+    outline: none;
+}
+
+.top-heading_admin{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.function:hover{
+    color: #009981;
+    background-color:#e3f1e6 ;
+    padding:8px 0px;
+    border-radius: 5px; 
+}
+/* viết cho addProduct */
+.body_content{
+    margin-top: 50px;
+}
+
+/* viết cho manageProducts */
+.wrapper_table_products{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+.table_products{
+    width: 100%;
+}
+.direction_products{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.direction_products a{
+    padding: 7px 20px;
+    color: #f5f5f5;
+    
+}
+.current_direct{
+    background-color:#FC5B31;
+    
+}
+.current_direct a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* viết cho editProduct */
+.wrapper_edit_product{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+}
+.edit_product{
+    width: 100%;
+   
+}
+.form_edit_product{
+    max-width: 800px;
+    margin: auto;
+    
+    
+}
+.form_edit_product input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.submit_edit_products{
+    float: right;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* viết cho quản lý khách hàng */
+.wrapper_manage_customer{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+.manage_customer{
+    margin: 0 50px;
+}
+
+/* VIẾT Cho manage order */
+.wrapper_manage_order{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+.manage_order{
+    margin: 0 50px;
+}
+.manage_order table{
+    max-width: 1000px;
+    margin: auto;
+}

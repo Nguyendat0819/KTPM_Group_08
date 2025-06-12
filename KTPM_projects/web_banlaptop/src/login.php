@@ -13,7 +13,7 @@
         <section class = "top-heading">
         <div class = "logo">
             <div class ="logo">
-                <a href="/website/KTPM_projects/web_banlaptop/src/home.phpp">
+                <a href="/website/KTPM_projects/web_banlaptop/src/home.php">
                     <img src="../assets/logo.webp" alt="Logo" title="Trang chủ">
                 </a>
             </div>
@@ -36,35 +36,46 @@
                         if(!$conn){
                             die("faile".mysqli_connect_error());
                         }
-                        $userName = $_POST['userName'];
-                        $password = $_POST['password'];
-                        $sql = "SELECT * FROM customer WHERE userName = ?";
+
+                        $res = mysqli_query($conn, "SELECT userName FROM customer");
+                        while($row = mysqli_fetch_assoc($res)){
+                            // echo "[" . $row['userName'] . "]<br>";
+                        }
+                        $userName = trim($_POST['userName']);
+                        // var_dump($userName);
+                        $password = trim($_POST['password']);
+                        // echo"$password";
+
+                        
+                        $sql = "SELECT * FROM customer WHERE userName  = ?";
                         $stmt = $conn->prepare($sql);
                         $stmt->bind_param("s", $userName);
                         $stmt->execute();
                         $result = $stmt->get_result();
-
-                        if($result->num_rows == 1){
-                            $user = $result->fetch_assoc(); // lấy dữ liệu ra
-                            if($password == $user['password']){
-                                $_SESSION['logged_in'] = true;
-                                $_SESSION['userName'] = $user['userName'];
-                                $_SESSION['customerName'] = $user['customerName'];
-                                if($user['userName'] == 'admin' && $user['password'] == 'Admin123@'){
-                                    header("Location: admin.php");
-                                }else{
-                                    header("Location: home.php");
+                        // var_dump($result->num_rows);
+                        if($result->num_rows > 0){
+                            $found = false;
+                            while($user = $result->fetch_assoc()){
+                                if($password == trim($user['password'])){
+                                    $_SESSION['logged_in'] = true;
+                                    $_SESSION['userName'] = $user['userName'];
+                                    $_SESSION['customerName'] = $user['customerName'];
+                                    $_SESSION['customerNumber'] = $user['customerNumber'];
+                                    if($user['userName'] == 'admin' && $user['password'] == 'Admin123@'){
+                                        header("Location: /website/KTPM_projects/web_banlaptop/src/admin/admin.php");
+                                    } else {
+                                        header("Location: homeuser.php");
+                                    }
+                                    exit();
                                 }
-                                exit();
-                            }else{
-                                echo"sai mk";
                             }
-                        }else{
-                            echo"tài khoản không tồn tại";
+                            echo "<script>alert('Sai mật khẩu');</script>";
+                        } else {
+                            echo "<script>alert('Tài khoản không tồn tại')</script>";
                         }
                     }
                 ?>
-                <form action="#" method="POST">
+                <form action="" method="POST">
                     <div class="input-field">
                         <input type="text" id="userName" placeholder="Tên đăng nhập" name="userName" required>
                     </div>
@@ -85,4 +96,23 @@
         </div>
     </div>
 </body>
+<script>
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.querySelector(".eye-icon");
+
+    let passwordVisible = false;
+
+    eyeIcon.addEventListener("click", () => {
+        passwordVisible = !passwordVisible;
+        if (passwordVisible) {
+            passwordInput.type = "text";
+            eyeIcon.src = "../assets/login/eye-closed.jpg"; // Mắt đóng
+            eyeIcon.alt = "Ẩn mật khẩu";
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.src = "../assets/login/eye-opened.png"; // Mắt mở
+            eyeIcon.alt = "Hiện mật khẩu";
+        }
+    });
+</script>
 </html>
